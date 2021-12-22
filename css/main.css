@@ -18,6 +18,8 @@ a {
   position: relative /* 위치상의 부모요소 */
 }
 
+
+
 /* HEADER */
 header {
   width: 100%;
@@ -25,6 +27,7 @@ header {
   border-bottom: 1px solid #c8c8c8;
   position: fixed; /* 뷰포트를 기준으로 배치, badges의 부모요소 */
   top: 0;
+  z-index: 9;
 }
 header > .inner {
   height: 120px;
@@ -186,4 +189,49 @@ header .badges .badge {
   margin-bottom: 12px;
   box-shadow: 4px 4px 10px rgba(0,0,0,.15);
   cursor: pointer;
+}
+
+/* VISUAL */ 
+
+.visual {
+  margin-top: 120px; /* header inner height */
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+}
+.visual .inner {
+  height: 646px;
+}
+.visual .title {
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+.visual .title .btn {
+
+}
+.visual .cup1.image {
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+}
+.visual .cup1.text {
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+.visual .cup2.image {
+  position: absolute;
+  bottom: 0;
+  right: 162px;
+}
+
+.visual .cup2.text {
+  position: absolute;
+  top: 321px;
+  right: 416px;
+}
+.visual .spoon {
+  position: absolute;
+  bottom: 0;
+  left: 275px;
 }
