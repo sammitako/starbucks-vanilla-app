@@ -17,8 +17,59 @@ a {
   margin: 0 auto; /* 가운데 정렬 */
   position: relative /* 위치상의 부모요소 */
 }
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
 
+.btn.btn--brown:hover {
+  background-color: #592B18;
+  color: #fff;
+}
+.btn.btn--gold {
+  color: #D9AA8A;
+  border-color: #D9AA8A;
+}
 
+.btn.btn--gold:hover {
+  background-color: #D9AA8A;
+  color: #fff;
+}
+.btn.btn--white {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn.btn--white:hover {
+  background-color: #fff;
+  color: #333;
+}
 
 /* HEADER */
 header {
@@ -206,8 +257,11 @@ header .badges .badge {
   top: 88px;
   left: -10px;
 }
+/* title과 묶어서 같이 배치 */
 .visual .title .btn {
-
+  position: absolute;
+  top: 259px;
+  left: 173px;
 }
 .visual .cup1.image {
   position: absolute;
@@ -234,4 +288,8 @@ header .badges .badge {
   position: absolute;
   bottom: 0;
   left: 275px;
+}
+/* 안보이게 미리 작업해놓고 자바스크립트로 애니메이션 삽입 */
+.visual .fade-in {
+  opacity: 0;
 }
