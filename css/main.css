@@ -564,8 +564,32 @@ header .badges .badge {
   top: 350px;
   left: 150px;
 }
-.youtube .floating3 {
+
+/* SEASON PRODUCT */
+.season-product {
+  background-image: url("../images/season_product_bg.jpg");
+}
+.season-product .inner {
+  height: 400px;
+}
+/* 구조 변경함 */
+.season-product .floating3 {
   position: absolute;
-  bottom: -200px;
+  top: -200px;
   right: 0;
 }
+.season-product .text-group {
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+.season-product .text-group .title {
+  margin-bottom: 10px;
+}
+.season-product .text-group .description{
+  margin-bottom: 15px;
+}
+.season-product .text-group .more {
+
+}
+
