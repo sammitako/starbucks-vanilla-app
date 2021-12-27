@@ -123,3 +123,17 @@ floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
 
+// ScrollMagic
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function (spyEl) {
+  // Scene() - 특정 요소를 감시하는 옵션을 지정하는 메소드
+  // setClassToggle() - HTML 클래스 지정 
+  // addTo() - 컨트롤러 추가
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl, // 감시하고 있는 섹션 정보 (보여짐 여부를 감시할 요소를 지정)
+      triggerHook: .8 // 뷰포트 - 시작:0, 끝:1
+    })
+    .setClassToggle(spyEl, 'show') // 해당 요소에 HTML 클래스 추가
+    .addTo(new ScrollMagic.Controller());
+});
