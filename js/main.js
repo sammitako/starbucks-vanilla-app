@@ -149,3 +149,7 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show') // 해당 요소에 HTML 클래스 추가
     .addTo(new ScrollMagic.Controller());
 });
+
+// 올해 년도 계산
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); // 2021
