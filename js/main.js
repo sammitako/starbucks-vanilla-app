@@ -16,12 +16,14 @@ searchInputEl.addEventListener('blur', function() {
   searchInputEl.setAttribute('placeholder', '');
 });
 
-
+// 배지 및 스크롤 시작 //
 // 스크롤이 어떤 값 이상으로 커지면 배지를 사라지게 한다.
 const badgeEl = document.querySelector('header .badges');
+// 스크롤이 어떤 값 이상으로 커지면 스크롤 버튼을 사라지게 한다.
+const toTopEl = document.querySelector('#to-top');
 
 // 화면자체
-window.addEventListener('scroll', _.throttle(function() { // 일정 시간 마다 함수가 실행되게 제한을 두는 js 애니메이션 라이브러리
+window.addEventListener('scroll', _.throttle(function() { // 일정 시간 마다 함수가 실행되게 제한을 두는 lodashjs 애니메이션 라이브러리
   if(window.scrollY > 500) {
     // 배지 숨기기
     // badgeEl.style.display = 'none';
@@ -30,6 +32,11 @@ window.addEventListener('scroll', _.throttle(function() { // 일정 시간 마�
       opacity: 0,
       display: 'none'
     }); 
+    // 가장 위로 올라가는 스크롤 애니메이션 기능
+    // 스크롤 버튼 보이기
+    gsap.to(toTopEl, .2, {
+      x: 0
+    });
   } else {
     // 배지 보이기
     // badgeEl.style.display = 'block';
@@ -37,9 +44,22 @@ window.addEventListener('scroll', _.throttle(function() { // 일정 시간 마�
       opacity: 1,
       display: 'block'
     });
+    // 스크롤 버튼 숨기기
+    gsap.to(toTopEl, .2, {
+      x: 100 // x축으로 100픽셀 이동하여 숨겨짐
+    });
   }
 }, 300));
 
+
+// 가장 위로 올라가는 스크롤 애니메이션 기능
+// scrollTo 옵선을 사용하기 위해 cdn 가져옴
+toTopEl.addEventListener('click', function() {
+  gsap.to(window, .7, {
+    scrollTo: 0 // 스크롤(화면)의 위치를 0픽셀 지점으로 이동 (0.7초 동안)
+  })
+})
+// 배지 및 스크롤 끝 //
 
 // 첫번째 섹션의 이미지들이 시간차로 순서대로 나타남
 const fadeEls = document.querySelectorAll('.visual .fade-in');
@@ -153,3 +173,5 @@ spyEls.forEach(function (spyEl) {
 // 올해 년도 계산
 const thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear(); // 2021
+
+
