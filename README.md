@@ -24,6 +24,6 @@
 
 ## Demo Website
 
-👉🏼 [Starbucks Website]([https://angry-hoover-7d1166.netlify.app](https://angry-hoover-7d1166.netlify.app/))
+👉🏼 [Starbucks Website](https://angry-hoover-7d1166.netlify.app/)
 
 ![Demo](./md-images/Demo.png)
