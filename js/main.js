@@ -8,7 +8,7 @@ searchEl.addEventListener('click', function() {
 
 searchInputEl.addEventListener('focus', function() {
   searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', 'search');
+  searchInputEl.setAttribute('placeholder', '통합검색');
 });
 
 searchInputEl.addEventListener('blur', function() {
@@ -87,7 +87,7 @@ new Swiper('.awards .swiper', {
   slidesPerView: 5,
   navigation: {
     prevEl: '.awards .swiper-prev',
-    nextEl: 'awards .swiper-next'
+    nextEl: '.awards .swiper-next'
   }
 });
 
